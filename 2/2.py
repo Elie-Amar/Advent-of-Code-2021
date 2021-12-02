@@ -21,7 +21,7 @@ def do2(input):
     store = {"forward": 0, "down": 0, "up": 0, "depth": 0}
     for i in input:
         dir, n = i.split(" ")
-        n = int(i)
+        n = int(n)
         store[dir] += n
         if dir == "forward":
             # store["aim"] = store.get("down", 0) - store.get("up", 0)         # is commented because unnecessary
