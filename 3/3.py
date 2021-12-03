@@ -19,8 +19,8 @@ def count(input, i, res):
     return count(input, i+1, res)
 
 
-def do(input, i, res):
-    c = count(input, i, res)
+def do(input, i):
+    c = count(input, i, {n: 0 for n in range(len(input[0]))})
     final = ""
     inverted = ""
     for y in c:
@@ -29,7 +29,7 @@ def do(input, i, res):
     return int(final, 2) * int(inverted, 2)
 
 
-def do2(input, i, res):
+def do2(input, i):
     o2 = [*input]
     co2 = [*input]
 
@@ -64,8 +64,8 @@ def do2(input, i, res):
     return int(o2[0], 2) * int(co2[0], 2)
 
 
-assert 198 == do(input_test, 0, {n: 0 for n in range(len(input_test[0]))})
-print("res: ", do(input, 0, {n: 0 for n in range(len(input[0]))}))
+assert 198 == do(input_test, 0)
+print("res: ", do(input, 0))
 
-assert 230 == do2(input_test, 0, {n: 0 for n in range(len(input_test[0]))})
-print("res2: ", do2(input, 0, {n: 0 for n in range(len(input[0]))}))
+assert 230 == do2(input_test, 0)
+print("res2: ", do2(input, 0))
