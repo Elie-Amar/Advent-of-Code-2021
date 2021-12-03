@@ -47,7 +47,6 @@ def do2(input, i):
         y = 0
         o2_to_remove = []
         while(len(o2) > 1 and y < len(o2)):
-            o2[y] = o2[y]
             if (o2[y][z] != final[z]):
                 o2_to_remove.append(o2[y])
             y += 1
@@ -56,7 +55,6 @@ def do2(input, i):
         y = 0
         co2_to_remove = []
         while(len(co2) > 1 and y < len(co2)):
-            co2[y] = co2[y]
             if (co2[y][z] != inverted[z]):
                 co2_to_remove.append(co2[y])
             y += 1
