@@ -47,18 +47,18 @@ def do2(input, i):
         y = 0
         o2_to_remove = []
         while(len(o2) > 1 and y < len(o2)):
-            word = o2[y]
-            if (word[z] != final[z]):
-                o2_to_remove.append(word)
+            o2[y] = o2[y]
+            if (o2[y][z] != final[z]):
+                o2_to_remove.append(o2[y])
             y += 1
         o2 = [el for el in o2 if el not in o2_to_remove]
 
         y = 0
         co2_to_remove = []
         while(len(co2) > 1 and y < len(co2)):
-            word = co2[y]
-            if (word[z] != inverted[z]):
-                co2_to_remove.append(word)
+            co2[y] = co2[y]
+            if (co2[y][z] != inverted[z]):
+                co2_to_remove.append(co2[y])
             y += 1
         co2 = [el for el in co2 if el not in co2_to_remove]
     return int(o2[0], 2) * int(co2[0], 2)
